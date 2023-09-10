@@ -1,0 +1,11 @@
+git clone https://github.com/Pythagora-io/gpt-pilot.git (clone the repo)
+cd gpt-pilot
+python -m venv pilot-env (create a virtual environment)
+source pilot-env/bin/activate (activate the virtual environment)
+pip install -r requirements.txt (install the dependencies)
+cd pilot
+mv .env.example .env (create the .env file)
+Add your environment (OpenAI/Azure), your API key and the SQLite/PostgreSQL database info to the .env file
+to change from SQLite to PostgreSQL in your .env just set DATABASE_TYPE=postgres
+python db_init.py (initialize the database)
+python main.py (start GPT Pilot)
